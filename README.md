@@ -1,4 +1,4 @@
-# *Test with Go* from Go Courses by Jon Calhoun
+# Workspace for *Test with Go* from Go Courses by Jon Calhoun
 
 - [Course Site](https://testwithgo.com/)
 - [Course Source Code](https://github.com/joncalhoun/twg)
