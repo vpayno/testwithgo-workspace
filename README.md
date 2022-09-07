@@ -7,4 +7,4 @@
 
 - 001 - [Tests Are Just Code](./001-tests_are_just_go_code)
 - 002 - [Test Signals and Messages](./002-test_signals_and_messages)
-
+- 003 - [Examples as Tests and Documentation](./003-examples_as_tests_and_documentation)
