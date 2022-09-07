@@ -1,4 +1,4 @@
-package example_test
+package example
 
 import (
 	"fmt"
@@ -6,19 +6,19 @@ import (
 
 	// Needed for initialize side effect
 	_ "image/png"
-
-	"github.com/joncalhoun/twg/example"
 )
 
 var file string = "this is not used"
 
+// If you only have one example in this file, the whole file will be shown in the example.
+// This comment won't get used in the documentation.
 func Example_crop() {
 	var r io.Reader
-	img, err := example.Decode(r)
+	img, err := Decode(r)
 	if err != nil {
 		panic(err)
 	}
-	err = example.Crop(img, 0, 0, 20, 20)
+	err = Crop(img, 0, 0, 20, 20)
 	if err != nil {
 		panic(err)
 	}
@@ -26,7 +26,7 @@ func Example_crop() {
 	if err != nil {
 		panic(err)
 	}
-	err = example.Encode(img, w)
+	err = Encode(img, w)
 	if err != nil {
 		panic(err)
 	}

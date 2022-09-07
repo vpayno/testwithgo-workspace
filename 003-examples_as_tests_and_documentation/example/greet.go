@@ -3,17 +3,20 @@ package example
 
 import "fmt"
 
+// Type Demo is used as an example method receiver.
 type Demo struct{}
 
-func (d Demo) Hello() {}
+// Hello returns the hello string and an error code.
+func (d Demo) Hello(name string) (string, error) {
+	return fmt.Sprintf("Hello, %s", name), nil
+}
 
-// Hello prints out hello to the person provided
+// Hello returns the hello string and an error code.
 func Hello(name string) (string, error) {
 	return fmt.Sprintf("Hello, %s", name), nil
 }
 
-// Page will print out a message asking each person who hasn't checked in
-// to do so.
+// Page will print out a message asking each person who hasn't checked in to do so.
 func Page(checkIns map[string]bool) {
 	for name, checkIn := range checkIns {
 		if !checkIn {
