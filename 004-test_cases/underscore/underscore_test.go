@@ -5,42 +5,26 @@ import (
 	"testing"
 )
 
-// func TestCamel(t *testing.T) {
-// 	testCases := []struct {
-// 		arg  string
-// 		want string
-// 	}{
-// 		{"thisIsACamelCaseString", "this_is_a_camel_case_string"},
-// 		{"with a space", "with a space"},
-// 		{"endsWithA", "ends_with_a"},
-// 	}
-// 	for _, tc := range testCases {
-// 		t.Logf("Testing: %q", tc.arg)
-// 		got := Camel(tc.arg)
-// 		if got != tc.want {
-// 			t.Errorf("Camel(%q) = %q; want %q", tc.arg, got, tc.want)
-// 		}
-// 	}
-// }
+func TestCamel_orig(t *testing.T) {
+	// moved test cases to underscore_cases_test.go
+	for _, tc := range camelTestCases {
+		t.Logf("Testing: %q", tc.arg)
+		got := Camel(tc.arg)
+		if got != tc.want {
+			t.Errorf("Camel(%q) = %q; want %q", tc.arg, got, tc.want)
+		}
+	}
+}
 
 func TestCamel(t *testing.T) {
-	tests := []struct {
-		arg  string
-		want string
-	}{
-		{"thisIsACamelCaseString", "this_is_a_camel_case_string"},
-		{"with a space", "with a space"},
-		{"endsWithA", "ends_with_a"},
-	}
-	// setup
-	for _, tt := range tests {
+	// moved test cases to underscore_cases_test.go
+	for _, tt := range camelTestCases {
 		t.Run(tt.arg, func(t *testing.T) {
 			if got := Camel(tt.arg); got != tt.want {
 				t.Fatalf("Camel() = %v, want %v", got, tt.want)
 			}
+			t.Log("this will print if it succeeds or fails...")
 			fmt.Println("this won't print if it fails...")
-			// check2
-			// check3
 		})
 	}
 }
