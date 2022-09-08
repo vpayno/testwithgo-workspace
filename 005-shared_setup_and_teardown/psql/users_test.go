@@ -12,7 +12,12 @@ import (
 
 func TestMain(m *testing.M) {
 	// 0. flag.Parse() if you need flags
+	// 1. Setup anything you need
+	// 2. exitCode := m.Run() // allow tests to run
+	// 2. exitCode := run(m) // hide shared setup and teardown code
 	exitCode := run(m)
+	// 3. teardown
+	// 4. os.Exit(exitCode) // tell caller if tests passed
 	os.Exit(exitCode)
 }
 

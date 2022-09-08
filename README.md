@@ -9,3 +9,4 @@
 - 002 - [Test Signals and Messages](./002-test_signals_and_messages)
 - 003 - [Examples as Tests and Documentation](./003-examples_as_tests_and_documentation)
 - 004 - [Test Cases](./004-test_cases)
+- 005 - [Shared Setup and Teardown Code](./005-shared_setup_and_teardown)
